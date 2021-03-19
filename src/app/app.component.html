@@ -1,16 +1,24 @@
 <div class="contenedor">
-    <label for="">Edad 1:</label><br>
-    <input type="text" [(ngModel)]="edadUno">
-    <br><br>
-    <label for="">Edad 2:</label><br>
-    <input type="text" [(ngModel)]="edadDos"><br>
-    <br>
-    <label for="">Promedio:</label><br>
-    <input type="text" value="{{promedio}}"><br><br>
-    <label for="">Suma:</label><br>
-    <input type="text" value="{{sumaTotal}}"><br><br>
-    <button (click)="calcular()">Calcular</button>
-    <button (click)="limpiar()">Limpiar</button>
+    <div class="inputs">
+        <label for="">Edad 1:</label>
+        <input type="text" [(ngModel)]="edadUno">
+    </div>
+    <div class="inputs">
+        <label for="">Edad 2:</label>
+        <input type="text" [(ngModel)]="edadDos">
+    </div>
+    <div class="inputs">
+        <label for="">Promedio:</label>
+        <input type="text" value="{{promedio}}" readonly>
+    </div>
+    <div class="inputs">
+        <label for="">Suma:</label>
+        <input type="text" value="{{sumaTotal}}" readonly>
+    </div>
+    <div class="botones">
+        <button (click)="calcular()">Calcular</button>
+        <button (click)="limpiar()">Limpiar</button>
+    </div>
 </div>
 <router-outlet>
 </router-outlet>

@@ -1,0 +1,24 @@
+.contenedor {
+    height: 20rem;
+    max-width: 18rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+label,
+input {
+    display: block;
+}
+
+.contenedor:last-child {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    margin: 0 1rem;
+    padding: 0.4rem 1.5rem;
+}

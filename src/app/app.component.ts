@@ -14,8 +14,15 @@ export class AppComponent {
   edadDos: any;
 
   calcular(){
-    this.promedio = (parseInt(this.edadUno) + parseInt(this.edadDos) )/ 2;
-    this.sumaTotal = parseInt(this.edadUno) + parseInt(this.edadDos)
+    if(this.edadUno == null || this.edadDos == null){
+      alert("Error. Ponga las edades primero.")
+    } else if (isNaN(this.edadUno) || isNaN(this.edadDos)) {
+      alert("Error. Ingrese valores numericos en las edades")
+    } else {
+      this.promedio = (parseInt(this.edadUno) + parseInt(this.edadDos) )/ 2;
+      this.sumaTotal = parseInt(this.edadUno) + parseInt(this.edadDos)
+    }
+    
   }
 
   limpiar(){
